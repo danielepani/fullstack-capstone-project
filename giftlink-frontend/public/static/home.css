@@ -39,7 +39,7 @@ body::before {
 }*/
 h2 {
     font-size:24px;
-    weight: 500;
+    font-weight: 500;
     color:#323232;
 }
 .lead {
