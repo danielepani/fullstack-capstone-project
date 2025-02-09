@@ -14,7 +14,7 @@ function DetailsPage() {
         const authenticationToken = sessionStorage.getItem('auth-token');
         if (!authenticationToken) {
 			// Task 1: Check for authentication and redirect
-            navigate('/app/login');
+            //navigate('/app/login');
         }
 
         // get the gift to be rendered on the details page
@@ -92,28 +92,28 @@ return (
                             <div className="no-image-available-large">No Image Available</div>
                         )}
                     </div>
-                    // Task 6: Display gift details
+                    {/*Task 6: Display gift details*/}
                     	<p><strong>Category:</strong> 
-				{gift.category}
+                        &nbsp;{gift.category}
 			</p>
                     	<p><strong>Condition:</strong> 
-				{gift.condition}
+                        &nbsp;{gift.condition}
                     	</p>
                     	<p><strong>Date Added:</strong> 
-				{gift.date}
+                        &nbsp;{(new Date(gift.date_added)).toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}
                         </p>
                     	<p><strong>Age (Years):</strong> 
-				{gift.age}
+                        &nbsp;{gift.age_years}
                     	</p>
                     	<p><strong>Description:</strong> 
-				{gift.description}
+				&nbsp;{gift.description}
                     	</p>
                 </div>
             </div>
             <div className="comments-section mt-4">
                 <h3 className="mb-3">Comments</h3>
-				// Task 7: Render comments section by using the map function to go through all the comments
-				{comments.map(comment => (
+				{/*Task 7: Render comments section by using the map function to go through all the comments*/}
+				{comments.map((comment, index) => (
                     <div key={index} className="card mb-3">
                         <div className="card-body">
                             <p className="comment-author"><strong>{comment.author}:</strong></p>
