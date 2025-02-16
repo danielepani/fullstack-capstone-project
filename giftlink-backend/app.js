@@ -9,7 +9,7 @@ const {loadData} = require("./util/import-mongo/index");
 
 const giftRoutes = require('./routes/giftRoutes');
 const searchRoutes = require('./routes/searchRoutes');
-
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 app.use("*",cors());
@@ -44,6 +44,7 @@ app.use('/api/gifts', giftRoutes);
 // Search API Task 2: add the searchRoutes to the server by using the app.use() method.
 app.use('/api/search', searchRoutes);
 
+app.use('/api/auth', authRoutes);
 
 // Global Error Handler
 app.use((err, req, res, next) => {
