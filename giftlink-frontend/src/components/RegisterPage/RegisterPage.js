@@ -62,7 +62,6 @@ function RegisterPage() {
 
                     {/* insert code here to create input elements for all the variables - firstName, lastName, email, password */}
     <div className="mb-4">
-
         <label htmlFor="firstName" className="form label"> FirstName</label><br />
         <input
         id="firstName"
@@ -71,6 +70,39 @@ function RegisterPage() {
         placeholder="Enter your firstName"
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
+        />
+    </div>
+    <div className="mb-4">
+        <label htmlFor="lastName" className="form label"> FirstName</label><br />
+        <input
+        id="lastName"
+        type="text"
+        className="form-control"
+        placeholder="Enter your firstName"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        />
+    </div>
+    <div className="mb-4">
+        <label htmlFor="email" className="form label"> FirstName</label><br />
+        <input
+        id="email"
+        type="email"
+        className="form-control"
+        placeholder="Enter your firstName"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        />
+    </div>
+    <div className="mb-4">
+        <label htmlFor="password" className="form label"> FirstName</label><br />
+        <input
+        id="password"
+        type="password"
+        className="form-control"
+        placeholder="Enter your firstName"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
         />
     </div>
                     {/* insert code here to create a button that performs the `handleRegister` function on click */}
